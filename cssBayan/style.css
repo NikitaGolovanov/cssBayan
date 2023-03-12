@@ -1,0 +1,105 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1vw;
+    
+}
+
+.accordion{
+    color: blue;
+}
+
+h2{
+    padding-left: 2vw;
+}
+
+
+.CssBayan{
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+
+}
+.meme{
+    flex-direction: column;
+    display: flex;
+    width: 70vw;
+    border: 0.2vw solid black;
+    border-radius: 2vw;
+    margin-bottom: 4vw;
+}
+
+
+.memIMG{
+    height: 0vw;
+    align-self: center;
+    transition: 0.5s;
+
+}
+
+.memeButton{
+    display: block;
+    position: absolute;
+    width: 70vw;
+    height: 4.3vw;
+    opacity: 0;
+    
+}    
+
+.image{
+    width: 2vw;
+    height: 2vw;
+    margin-left: 56vw;
+    align-self: center;
+    position: absolute;
+    margin-top: 1vw;
+    background-size: contain;
+    visibility: hidden;
+    background-image: url("./assets/free-icon-font-users-3914353.svg");
+    transition: 0.5s;
+
+}
+
+.memeButton:focus~.image{
+    visibility: visible;
+    background-image: url("./assets/free-icon-font-heart-3916580.svg");
+}
+
+
+.memeButton:focus~.memIMG{
+    height: 24vw;
+    margin-bottom: 3vw;
+}
+
+.memeButton:focus ~ h2{
+    color: black;
+}
+.memeButton:active ~ h2{
+    color: blue;
+}
+
+@media only screen and (min-width:1440px){
+    .memeButton{
+        cursor: pointer;
+    }
+    .meme:hover>.memeButton{
+        height: 31.4vw;
+    }
+    .accordion:hover{
+        color: black;
+    }
+    .accordion:hover>.meme>.image{
+        visibility: visible;
+        
+    }
+    .meme:hover>.memIMG{
+        height: 24vw;
+        margin-bottom: 3vw;
+    }
+    .memeButton:hover~.image{
+        background-image: url("./assets/free-icon-font-heart-3916580.svg");
+    }
+}
