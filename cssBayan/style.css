@@ -59,6 +59,7 @@ h2{
     background-size: contain;
     visibility: hidden;
     background-image: url("./assets/free-icon-font-users-3914353.svg");
+    transition: 0.5s;
 
 }
 
